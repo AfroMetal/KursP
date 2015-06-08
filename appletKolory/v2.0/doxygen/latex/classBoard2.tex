@@ -1,0 +1,157 @@
+\hypertarget{classBoard2}{\section{Board2 Class Reference}
+\label{classBoard2}\index{Board2@{Board2}}
+}
+
+
+Klasa definiujaca plansze, na ktorej dziala program.  
+
+
+
+
+Inherits J\-Panel.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBoard2_ad33bfb04a336742d3f6f1636490c899d}{Board2} (final int \hyperlink{classBoard2_a7873fa80bb562ba0ce7c93f76eddc8f3}{wid}, final int \hyperlink{classBoard2_a465a4d61359fc92c11cafdd8d0745ec0}{hei}, final int \hyperlink{classBoard2_a0c416dfe261333a6ef3dcd7f7b38b234}{k}, final double \hyperlink{classBoard2_a697bd8c3fd4b418c6570a9ad6c6dfdf9}{p})
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy Board. \end{DoxyCompactList}\item 
+synchronized void \hyperlink{classBoard2_a704747614afe2d92dc86f8458ee30282}{set\-Color} (Color color, int x, int y)
+\begin{DoxyCompactList}\small\item\em Klasa zmieniajaca kolor pola \hyperlink{classBoard2}{board}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Package Attributes}
+\begin{DoxyCompactItemize}
+\item 
+J\-Label\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \hyperlink{classBoard2_a591cfed002537e354f23f8e34c2af16b}{board}
+\begin{DoxyCompactList}\small\item\em Tablica dwuwymiarowa etykiet pol planszy. \end{DoxyCompactList}\item 
+\hyperlink{classFieldToChange2}{Field\-To\-Change2}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \hyperlink{classBoard2_a1b9b09d4149a62fbb51d84bc2605dbab}{field}
+\begin{DoxyCompactList}\small\item\em Tablica dwuwymiarowa obiektow klasy \hyperlink{classFieldToChange2}{Field\-To\-Change2}. \end{DoxyCompactList}\item 
+Random \hyperlink{classBoard2_ada7b5c5a270ea7e76387dae977fc3cdd}{random}
+\begin{DoxyCompactList}\small\item\em Generator liczb pseudolosowych. \end{DoxyCompactList}\item 
+int \hyperlink{classBoard2_a7873fa80bb562ba0ce7c93f76eddc8f3}{wid}
+\begin{DoxyCompactList}\small\item\em Szerokosc pola, domyslnie 20. \end{DoxyCompactList}\item 
+int \hyperlink{classBoard2_a465a4d61359fc92c11cafdd8d0745ec0}{hei}
+\begin{DoxyCompactList}\small\item\em Wysokosc pola, domyslnie 20. \end{DoxyCompactList}\item 
+int \hyperlink{classBoard2_a0c416dfe261333a6ef3dcd7f7b38b234}{k}
+\begin{DoxyCompactList}\small\item\em Opoznienie zmiany koloru, domyslnie 500 ms. \end{DoxyCompactList}\item 
+final double \hyperlink{classBoard2_a697bd8c3fd4b418c6570a9ad6c6dfdf9}{p}
+\begin{DoxyCompactList}\small\item\em Prawdopodobienstwo zmiany koloru na losowy, domyslnie 0.\-3. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Klasa definiujaca plansze, na ktorej dziala program. 
+
+\begin{DoxyAuthor}{Author}
+Radoslaw Kowalski 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\-0 
+\end{DoxyVersion}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBoard2_ad33bfb04a336742d3f6f1636490c899d}{\index{Board2@{Board2}!Board2@{Board2}}
+\index{Board2@{Board2}!Board2@{Board2}}
+\subsubsection[{Board2}]{\setlength{\rightskip}{0pt plus 5cm}Board2.\-Board2 (
+\begin{DoxyParamCaption}
+\item[{final int}]{wid, }
+\item[{final int}]{hei, }
+\item[{final int}]{k, }
+\item[{final double}]{p}
+\end{DoxyParamCaption}
+)}}\label{classBoard2_ad33bfb04a336742d3f6f1636490c899d}
+
+
+Konstruktor klasy Board. 
+
+Tworzy generator liczb. Plansze zapelnia polami J\-Label i nadaje im losowe kolory. Uruchamia watki. 
+\begin{DoxyParams}{Parameters}
+{\em wid} & \{int\} szerokosc pola. \\
+\hline
+{\em hei} & \{int\} wysokosc pola. \\
+\hline
+{\em k} & \{int\} opoznienie w ms. \\
+\hline
+{\em p} & \{double\} prawdopodobienstwo. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBoard2_a704747614afe2d92dc86f8458ee30282}{\index{Board2@{Board2}!set\-Color@{set\-Color}}
+\index{set\-Color@{set\-Color}!Board2@{Board2}}
+\subsubsection[{set\-Color}]{\setlength{\rightskip}{0pt plus 5cm}synchronized void Board2.\-set\-Color (
+\begin{DoxyParamCaption}
+\item[{Color}]{color, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{classBoard2_a704747614afe2d92dc86f8458ee30282}
+
+
+Klasa zmieniajaca kolor pola \hyperlink{classBoard2}{board}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & kolor na, ktory zostanie zmieniony. \\
+\hline
+{\em x} & \{int\} wspolrzedna x pola do zmiany. \\
+\hline
+{\em y} & \{int\} wspolrzedna y pola do zmiany. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classBoard2_a591cfed002537e354f23f8e34c2af16b}{\index{Board2@{Board2}!board@{board}}
+\index{board@{board}!Board2@{Board2}}
+\subsubsection[{board}]{\setlength{\rightskip}{0pt plus 5cm}J\-Label \mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} Board2.\-board\hspace{0.3cm}{\ttfamily [package]}}}\label{classBoard2_a591cfed002537e354f23f8e34c2af16b}
+
+
+Tablica dwuwymiarowa etykiet pol planszy. 
+
+\hypertarget{classBoard2_a1b9b09d4149a62fbb51d84bc2605dbab}{\index{Board2@{Board2}!field@{field}}
+\index{field@{field}!Board2@{Board2}}
+\subsubsection[{field}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Field\-To\-Change2} \mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} Board2.\-field\hspace{0.3cm}{\ttfamily [package]}}}\label{classBoard2_a1b9b09d4149a62fbb51d84bc2605dbab}
+
+
+Tablica dwuwymiarowa obiektow klasy \hyperlink{classFieldToChange2}{Field\-To\-Change2}. 
+
+\hypertarget{classBoard2_a465a4d61359fc92c11cafdd8d0745ec0}{\index{Board2@{Board2}!hei@{hei}}
+\index{hei@{hei}!Board2@{Board2}}
+\subsubsection[{hei}]{\setlength{\rightskip}{0pt plus 5cm}int Board2.\-hei\hspace{0.3cm}{\ttfamily [package]}}}\label{classBoard2_a465a4d61359fc92c11cafdd8d0745ec0}
+
+
+Wysokosc pola, domyslnie 20. 
+
+\hypertarget{classBoard2_a0c416dfe261333a6ef3dcd7f7b38b234}{\index{Board2@{Board2}!k@{k}}
+\index{k@{k}!Board2@{Board2}}
+\subsubsection[{k}]{\setlength{\rightskip}{0pt plus 5cm}int Board2.\-k\hspace{0.3cm}{\ttfamily [package]}}}\label{classBoard2_a0c416dfe261333a6ef3dcd7f7b38b234}
+
+
+Opoznienie zmiany koloru, domyslnie 500 ms. 
+
+\hypertarget{classBoard2_a697bd8c3fd4b418c6570a9ad6c6dfdf9}{\index{Board2@{Board2}!p@{p}}
+\index{p@{p}!Board2@{Board2}}
+\subsubsection[{p}]{\setlength{\rightskip}{0pt plus 5cm}final double Board2.\-p\hspace{0.3cm}{\ttfamily [package]}}}\label{classBoard2_a697bd8c3fd4b418c6570a9ad6c6dfdf9}
+
+
+Prawdopodobienstwo zmiany koloru na losowy, domyslnie 0.\-3. 
+
+\hypertarget{classBoard2_ada7b5c5a270ea7e76387dae977fc3cdd}{\index{Board2@{Board2}!random@{random}}
+\index{random@{random}!Board2@{Board2}}
+\subsubsection[{random}]{\setlength{\rightskip}{0pt plus 5cm}Random Board2.\-random\hspace{0.3cm}{\ttfamily [package]}}}\label{classBoard2_ada7b5c5a270ea7e76387dae977fc3cdd}
+
+
+Generator liczb pseudolosowych. 
+
+\hypertarget{classBoard2_a7873fa80bb562ba0ce7c93f76eddc8f3}{\index{Board2@{Board2}!wid@{wid}}
+\index{wid@{wid}!Board2@{Board2}}
+\subsubsection[{wid}]{\setlength{\rightskip}{0pt plus 5cm}int Board2.\-wid\hspace{0.3cm}{\ttfamily [package]}}}\label{classBoard2_a7873fa80bb562ba0ce7c93f76eddc8f3}
+
+
+Szerokosc pola, domyslnie 20. 
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Board2.\-java\end{DoxyCompactItemize}

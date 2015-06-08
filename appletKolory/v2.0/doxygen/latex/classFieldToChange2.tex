@@ -1,0 +1,98 @@
+\hypertarget{classFieldToChange2}{\section{Field\-To\-Change2 Class Reference}
+\label{classFieldToChange2}\index{Field\-To\-Change2@{Field\-To\-Change2}}
+}
+
+
+Klasa (Watek) opisujaca zmiane kolorow pol, jest rozszerzeniem Thread.  
+
+
+
+
+Inherits Thread.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classFieldToChange2_ab3527ba3fa80126a7d0350e4cf9c8e7f}{run} ()
+\begin{DoxyCompactList}\small\item\em Metoda opisujaca dzialanie watku. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Package Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFieldToChange2_a6f4a2638a307f63b349edfa719a8e8e6}{Field\-To\-Change2} (\hyperlink{classBoard2}{Board2} b, int x, int y)
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \hyperlink{classFieldToChange2}{Field\-To\-Change2} pobierajacy wspolrzedne pola. \end{DoxyCompactList}\item 
+int \hyperlink{classFieldToChange2_a0b9f1375b65be010f68fc1028166ad14}{Get\-Field} (int x, int y, int c)
+\begin{DoxyCompactList}\small\item\em Metoda sprawdzajaca czy pole, z ktorego chcemy pobrac nie znajduje sie poza plansza. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Klasa (Watek) opisujaca zmiane kolorow pol, jest rozszerzeniem Thread. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classFieldToChange2_a6f4a2638a307f63b349edfa719a8e8e6}{\index{Field\-To\-Change2@{Field\-To\-Change2}!Field\-To\-Change2@{Field\-To\-Change2}}
+\index{Field\-To\-Change2@{Field\-To\-Change2}!FieldToChange2@{Field\-To\-Change2}}
+\subsubsection[{Field\-To\-Change2}]{\setlength{\rightskip}{0pt plus 5cm}Field\-To\-Change2.\-Field\-To\-Change2 (
+\begin{DoxyParamCaption}
+\item[{{\bf Board2}}]{b, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [package]}}}\label{classFieldToChange2_a6f4a2638a307f63b349edfa719a8e8e6}
+
+
+Konstruktor klasy \hyperlink{classFieldToChange2}{Field\-To\-Change2} pobierajacy wspolrzedne pola. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & objekt b klasy \hyperlink{classBoard2}{Board2}. \\
+\hline
+{\em x} & \{int\} wspolrzedna x. \\
+\hline
+{\em y} & \{int\} wspolrzedna y. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classFieldToChange2_a0b9f1375b65be010f68fc1028166ad14}{\index{Field\-To\-Change2@{Field\-To\-Change2}!Get\-Field@{Get\-Field}}
+\index{Get\-Field@{Get\-Field}!FieldToChange2@{Field\-To\-Change2}}
+\subsubsection[{Get\-Field}]{\setlength{\rightskip}{0pt plus 5cm}int Field\-To\-Change2.\-Get\-Field (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [package]}}}\label{classFieldToChange2_a0b9f1375b65be010f68fc1028166ad14}
+
+
+Metoda sprawdzajaca czy pole, z ktorego chcemy pobrac nie znajduje sie poza plansza. 
+
+Gdy tak, to pobiera kolor z pola po przeciwnej stronie (symulacja torusa). 
+\begin{DoxyParams}{Parameters}
+{\em x} & \{int\} wspolrzedna x; \\
+\hline
+{\em y} & \{int\} wspolrzedna y; \\
+\hline
+{\em c} & \{int\} kod koloru (0 = red, 1 = green, 2 = blue) do pobrania; \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\{int\} zwraca wartosc koloru w rgb; 
+\end{DoxyReturn}
+\hypertarget{classFieldToChange2_ab3527ba3fa80126a7d0350e4cf9c8e7f}{\index{Field\-To\-Change2@{Field\-To\-Change2}!run@{run}}
+\index{run@{run}!FieldToChange2@{Field\-To\-Change2}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void Field\-To\-Change2.\-run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classFieldToChange2_ab3527ba3fa80126a7d0350e4cf9c8e7f}
+
+
+Metoda opisujaca dzialanie watku. 
+
+Kolor zostaje zmieniony na losowy lub kolor sredni sasiadow w zaleznosci od wartosci prawdopodobienstwa. 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Field\-To\-Change2.\-java\end{DoxyCompactItemize}
