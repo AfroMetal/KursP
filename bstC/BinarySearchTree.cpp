@@ -27,15 +27,15 @@ public:
   {
     this->key = key;
     this->value = value;
-    left = 0;
-    right = 0;
+    left = nullptr;
+    right = nullptr;
   }
   
   ~Node()
   {
-    parent = 0;
-    left = 0;
-    right = 0;
+    parent = nullptr;
+    left = nullptr;
+    right = nullptr;
   }
 };
 
@@ -48,7 +48,7 @@ public:
   Node<K,V>* root;
   /**Konstruktor tworzacy puste drzewo*/
 public:
-  BinarySearchTree() { root = 0; }
+  BinarySearchTree() { root = nullptr; }
   
   ~BinarySearchTree() {}
   
@@ -58,7 +58,7 @@ public:
   V searchValueByKey(K key)
   {
     Node<K,V>* node = searchNode(root, key);   //wywolanie wyszukiwania wezla o kluczu key
-    if( node != 0 )                        //jesli znaleziono wezel zwroc jego wartosc
+    if( node != nullptr )                        //jesli znaleziono wezel zwroc jego wartosc
       return node->value;
     else                                      //jesli nie znalezione wezla zwroc null
       return 0; 
@@ -69,7 +69,7 @@ public:
    * @return zwraca wezel o podanym kluczu*/
   Node<K,V>* searchNode(Node<K,V>* x, K key)   //x na poczatku jest korzeniem, szukamy klucza key
   {
-    while( x != 0 && key != x->key )              //gdy x (korzen) nie jest pusty i klucz nie jest kluczem aktualnego x
+    while( x != nullptr && key != x->key )              //gdy x (korzen) nie jest pusty i klucz nie jest kluczem aktualnego x
       if( key < x->key )                //porownanie key i klucza x     
         x = x->left;                                 //jesli key jest niejszy przechodzimy do lewego poddrzewa x
       else
@@ -83,8 +83,8 @@ public:
   {
     Node<K,V>* node = new Node<K,V>(key, value);  //tworzymy nowy wezel, ktory wstawimy w odpowiednie miejsce
     Node<K,V>* x = root;                       //przegladanie zaczynamy w korzeniu, x przebiega po sciezce
-    Node<K,V>* y = 0;                       //y zawiera zawsze wskazanie na ojca x
-    while( x != 0 )                        //x i y sa przesuwane w dol drzewa w prawo lub lewo zaleznie od porownania node.key z x.key az x przyjmie wartosc null
+    Node<K,V>* y = nullptr;                       //y zawiera zawsze wskazanie na ojca x
+    while( x != nullptr )                        //x i y sa przesuwane w dol drzewa w prawo lub lewo zaleznie od porownania node.key z x.key az x przyjmie wartosc null
     {
       y = x;
       if( node->key < x->key )
@@ -93,7 +93,7 @@ public:
         x = x->right;
     }
     node->parent = y;                          //znalezlismy miejsce do wstawienia wezla, wiec y wskazuje na rodzica naszego nowego wezla
-    if( y == 0 )                           //jesli nie da sie znalezc rodzica drzewo jest puste, wstawiamy wezel jako korzen
+    if( y == nullptr )                           //jesli nie da sie znalezc rodzica drzewo jest puste, wstawiamy wezel jako korzen
       root = node;
     else
     {
@@ -111,17 +111,17 @@ public:
     Node<K,V>* x;                                  //x pomocniczy wezel
     Node<K,V>* node = searchNode(root, key);       //wezel ktorego klucz jest argumentem metody
     
-    if( node->left == 0 || node->right == 0 )  //jesli node ma co najwyzej jednego syna y jest wezlem wejsciowym node
+    if( node->left == nullptr || node->right == nullptr )  //jesli node ma co najwyzej jednego syna y jest wezlem wejsciowym node
       y = node;
     else                                          //jesli node ma 2 synow y jest nastepnikiem (nastepna wartoscia wieksza od node) node
       y = succesor(node);
-    if( y->left != 0 )                          //jesli y ma lewego syna to zapisz go pod x
+    if( y->left != nullptr )                          //jesli y ma lewego syna to zapisz go pod x
       x = y->left;
     else                                          //jesli y ma prawego syna to zapisz go pod x  
       x = y->right;
-    if( x != 0 )                               //111-119 wezel y zostaje usuniety
+    if( x != nullptr )                               //111-119 wezel y zostaje usuniety
       x->parent = y->parent;                        //jesli pod x przypisano jakas wartosc to x i y sa w tym samym miejscu drzewa
-    if( y->parent == 0 )
+    if( y->parent == nullptr )
       root = x;                                   //jesli y nie ma rodzica (jest korzeniem) to korzeniem staje sie x
     else                                          //w przeciwnym wypadku
       if( y == (y->parent)->left )                  //jesli y jest lewym dzieckiem zamien je na x
@@ -138,7 +138,7 @@ public:
    * @param x korzen drzewa*/
   void inorder(Node<K,V>* x)
   {
-    if( x != 0 )
+    if( x != nullptr )
     {
       inorder(x->left);
       cout << x->value << endl;
@@ -150,10 +150,10 @@ public:
    * @return zwraca wezel o kluczu kolejnym wzgledem x*/
   Node<K,V>* succesor(Node<K,V>* x)
   {
-    if( x->right != 0 )             //jesli prawe poddrzewo x nie jest puste to nastepnikiem jest wezel najbardziej z lewej
+    if( x->right != nullptr )             //jesli prawe poddrzewo x nie jest puste to nastepnikiem jest wezel najbardziej z lewej
       return minimum(x->right);
     Node<K,V>* y = x->parent;           //y jest rodzicem x
-    while( y != 0 && x == y->right) //jesli x nie ma prawego poddrzewa, ale ma nastepnik y to y jest najnizszym przodkiem x, ktorego lewy syn tez jest przodkiem x
+    while( y != nullptr && x == y->right) //jesli x nie ma prawego poddrzewa, ale ma nastepnik y to y jest najnizszym przodkiem x, ktorego lewy syn tez jest przodkiem x
     {
       x = y;                          //przechodzimy do kolejnych rodzicow zaczynajac od y az dojdziemy do korzenia lub x nie bedzie prawym dzieckiem swojego rodzica
       y = y->parent;
@@ -165,7 +165,7 @@ public:
    * @return zwraca wezel o najmniejszym kluczu*/
   Node<K,V>* minimum(Node<K,V>* x)
   {
-    while( x->left != 0 ) //podazamy po lewych dzieciach az dojdziemy do liscia czyli wezla o najmniejszym kluczu w danym poddrzewie
+    while( x->left != nullptr ) //podazamy po lewych dzieciach az dojdziemy do liscia czyli wezla o najmniejszym kluczu w danym poddrzewie
       x = x->left;
     return x;
   }

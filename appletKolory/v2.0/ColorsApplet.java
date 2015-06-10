@@ -49,6 +49,7 @@ public class ColorsApplet extends Applet
     frame.pack();
     frame.setLocationRelativeTo(null);
     frame.setResizable(false);
+    //frame.setResizable(true);
     frame.setVisible(true);
   }
 }
